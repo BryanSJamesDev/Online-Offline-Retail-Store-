@@ -145,7 +145,6 @@ class Order {
     }
 
     public void generateOrderId() {
-        // Generate a unique order ID based on the counter and set it to the 'id' field
         this.id = "ORD" + String.format("%04d", orderIdCounter); // Example format: ORD0001
         orderIdCounter++; // Increment the counter for the next order
     }
@@ -181,7 +180,7 @@ class Order {
         return subtotal;
     }
 
-    // Define a method to calculate the total tax for the order
+    // to calculate the total tax for the order
     public double calculateTotalTax() {
         double totalTax = 0.0;
         for (OrderItem item : orderItems) {
@@ -190,8 +189,7 @@ class Order {
         return totalTax;
     }
 
-    // Define a method to calculate the total cost for the order (subtotal + total
-    // tax)
+
     public double calculateTotalCost() {
         double subtotal = calculateSubtotal();
         double totalTax = calculateTotalTax();
@@ -199,9 +197,7 @@ class Order {
         return totalCost;
     }
 
-    // Implement methods for retrieving order history, generating shipping labels,
-    // and more
-    // Add this method to the Order class
+
     public void generateReceipt() {
 
         // Create a receipt object or print the details directly
@@ -228,11 +224,10 @@ class Order {
         System.out.println("Thank you for shopping with us!");
     }
 
-    // Method to calculate tax based on the order's subtotal, customer location, and
-    // product type
+ 
     public double calculateTax(double subtotal, String customerLocation, String productType) {
         // Retrieve the applicable tax rate based on the customer's location and product
-        // type
+        
         double taxRate = getTaxRateByLocationAndProductType(customerLocation, productType);
 
         // Calculate tax amount
@@ -243,13 +238,7 @@ class Order {
     }
 
     private double getTaxRateByLocationAndProductType(String customerLocation, String productType) {
-        // Implement logic to determine the tax rate based on customer location and
-        // product type
-        // This could involve looking up tax rates from a database or using complex
-        // rules.
-        // Replace this with your actual tax rate retrieval logic.
-
-        // Example: Different tax rates for different regions and product categories
+        
         if (customerLocation.equals("NY")) {
             if (productType.equals("Electronics")) {
                 return 8.0; // 8% tax for electronics in New York
@@ -406,7 +395,7 @@ class User {
     }
 
     public String getLocation() {
-        return location; // Getter method to retrieve the user's location
+        return location; 
     }
 
     public UserAccessLevel getAccessLevel() {
