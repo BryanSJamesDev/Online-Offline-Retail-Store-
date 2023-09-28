@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-// Add more reporting methods as needed for your business requirements
+
 
 class CashRegister {
     private double cashBalance;
@@ -174,7 +174,7 @@ class Payment {
         System.out.print("6) Shipping address: ");
         String shippingAddress = scanner.nextLine();
 
-        // Perform validation of input here if needed
+
         if (!isValidEmail(emailAddress) || !isValidPassword(password) || paypalAddress.isEmpty()
                 || !isValidPhoneNumber(paypalPhoneNumber) || billingAddress.isEmpty() || shippingAddress.isEmpty()) {
             System.out.println("Invalid input. Please provide valid details for all required fields.");
@@ -186,23 +186,17 @@ class Payment {
     }
 
     private static boolean isValidEmail(String email) {
-        // Implement email validation logic here
-        // Example: Check if the email matches a valid email pattern
-        // You can use regular expressions or a library for this purpose
+
         return email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
     }
 
     private static boolean isValidPassword(String password) {
-        // Implement password validation logic here
-        // Example: Check if the password meets your criteria (e.g., minimum length,
-        // special characters, etc.)
+
         return password.length() >= 8; // Example: Password must be at least 8 characters long
     }
 
     private static boolean isValidPhoneNumber(String phoneNumber) {
-        // Implement phone number validation logic here
-        // Example: Check if the phone number matches a valid phone number pattern
-        // You can use regular expressions or a library for this purpose
+
         return phoneNumber.matches("^\\d{10}$"); // Example: 10-digit phone number
     }
 
@@ -503,14 +497,9 @@ class SimpleECommerce {
                             System.out.println("Receipt for Order ID: " + order.getId());
 
                             System.out.println("Order Status: " + order.getStatus());
-                            // ... Other receipt information ..
+
                             System.out.println("Thank you for shopping with us!");
 
-                            // Display a thank-you message
-                            // Update the sales data
-
-                            // Break out of the shopping loop after generating the receipt
-                            // Update the sales data
 
                         }
                         cashRegister.reconcileCash();
@@ -521,7 +510,6 @@ class SimpleECommerce {
                     }
 
                 }
-                // Display the receipt only after the user has completed the checkout
 
             } else if (shoppingMode == 2) {
                 // Offline shopping
