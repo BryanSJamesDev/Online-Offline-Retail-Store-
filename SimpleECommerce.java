@@ -14,7 +14,7 @@ class CashRegister {
         return cashBalance;
     }
 
-    public void processCashPayment(double amountPaid, double totalCost) {
+public void processCashPayment(double amountPaid, double totalCost) {
         if (amountPaid >= totalCost && cashBalance >= totalCost) {
             double change = amountPaid - totalCost;
             System.out.println("Cash payment received. Change: $" + change);
